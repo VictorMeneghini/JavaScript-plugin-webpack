@@ -4,6 +4,7 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 const uglifyJsPlugin = require('uglifyjs-webpack-plugin');
 module.exports = {
     entry: './src/index.js',
+    mode: 'development',
     output: {
         library: 'UserList',
         libraryTarget: 'umd',
@@ -11,6 +12,12 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'index.js'
     },
+    devServer: {
+        inline: false,
+        contentBase: path.join(__dirname, 'dist'),
+        compress: true,
+        port: 9000
+      },
     module: {
         rules: [
             {
