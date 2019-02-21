@@ -1,0 +1,15 @@
+// / plugin level css
+$bg-color: #fff;
+$default-size: 400px;
+
+.users-list{
+    width: $default-size;
+    min-height: $default-size / 2;
+    border-radius: 3px;
+    background-color: $bg-color;
+    padding: 15px 30px;
+    list-style-type: none;
+    >li{
+        line-height: 30px;
+    }
+}
